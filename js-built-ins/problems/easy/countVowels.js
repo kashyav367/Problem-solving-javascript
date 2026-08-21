@@ -41,7 +41,7 @@ function countVowels(str) {
 }
  let str = ""
 let result = countVowels(str)
-console.log(result)
+// console.log(result)
 module.exports = { countVowels };
 
 
