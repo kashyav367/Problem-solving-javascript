@@ -27,8 +27,21 @@
 
 function countVowels(str) {
   // Your code here
-}
 
+  let count = 0;
+
+  for(let i=0 ; i<str.length ; i++){
+    if(str[i] ==="a" || str[i] ==="e" || str[i] ==="i" || str[i] ==="o" || str[i] ==="u" || str[i] ==="s" 
+      || str[i] ==="A" || str[i] ==="E"||str[i] ==="I"||str[i] ==="O" ||str[i] ==="U" || str[i] ==="S"
+    ){
+      count++;
+    }
+  }
+  return count
+}
+ let str = ""
+let result = countVowels(str)
+console.log(result)
 module.exports = { countVowels };
 
 

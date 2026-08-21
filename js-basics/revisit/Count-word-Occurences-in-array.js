@@ -9,7 +9,7 @@
 //     - Output:{ apple: 3, banana: 2, orange: 1 }
 
 
-function wordOccurences(input){
+function wordOccurrences(input){
 
 let Output = {}
 
