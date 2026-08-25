@@ -19,9 +19,37 @@
 */
 
 
-function findDuplicates(arr) {
-  return arr.filter((ele, index) => arr.indexOf(ele) !== index);
+// function findDuplicates(arr) {
+//   return arr.filter((ele, index) => arr.indexOf(ele) !== index);
+// }
+
+
+
+
+function findDuplicates(input){
+
+  let obj = {}
+
+  for(let key in input){
+    let value =  input[key]
+    if(obj[value]){
+      obj[value]++
+    }
+    else{
+      obj[value] = 1
+    }
+  }
+  let arr = []
+  for(let key in obj){
+    if(obj[key] > 1){
+     arr.push(Number(key))
+  }
+}
+  return arr
 }
 
-module.exports = findDuplicates;
+let input = [10, 20, 30, 10, 40]
+let result = findDuplicates(input)
+console.log(result)
 
+ module.exports = findDuplicates;
