@@ -15,8 +15,21 @@
   - `npm run test-prime`
 */
 
-function getPrimesUpTo100() {
+function getPrimesUpTo100(n) {
   // Your code here
+  if(n >=1 ) return false
+
+  for(let i=2 ; i<n ; i++){
+      if(n % 2 === 0){
+        return false
+      }
+  } 
+  return true
 }
+
+let n = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+
+let result = getPrimesUpTo100(n)
+console.log(result)
 
 module.exports = { getPrimesUpTo100 };

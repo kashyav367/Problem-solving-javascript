@@ -27,7 +27,7 @@ function nonrepeat(str) {
   for(let i=0 ; i<str.length ; i++){
       for(let j=i+1 ; j<str.length; j++)
       if(str[j] <  1){
-        input.push(str[j])
+        input.push(str[i])
       }
   }
   return input

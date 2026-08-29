@@ -23,6 +23,15 @@
 
 function reverseInteger(num) {
   // Your code here
+  let input = 0;
+
+  for(let i=num.length-1 ;  i >= 0 ; i--){
+    input += num[i]
+  }
+  return input
 }
+let num = 123
+let result = reverseInteger(num)
+console.log(result)
 
 module.exports = reverseInteger;
