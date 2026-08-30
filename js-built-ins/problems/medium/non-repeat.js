@@ -23,14 +23,22 @@
 */
 function nonrepeat(str) {
   // Your code here'
-  let input = ""
+  let obj = {}
+
   for(let i=0 ; i<str.length ; i++){
-      for(let j=i+1 ; j<str.length; j++)
-      if(str[j] <  1){
-        input.push(str[i])
-      }
+    if(obj[str[i]]){
+      obj[str[i]]++
+    }
+    else{
+    obj[str[i]] = 1;
+    }
   }
-  return input
+    for(let key in obj){
+    if(obj[key] == 1){
+      return key
+    }
+  }
+  return null
 }
 
 let str = "abcab"

@@ -23,12 +23,16 @@
 
 function reverseInteger(num) {
   // Your code here
-  let input = 0;
+  let reverse = 0;
+  num = num + " "
+  let rem;
 
-  for(let i=num.length-1 ;  i >= 0 ; i--){
-    input += num[i]
+  while(num > 0){
+    rem = num % 10
+    reverse = 10*reverse+rem
+    num = num/10
   }
-  return input
+  return reverse
 }
 let num = 123
 let result = reverseInteger(num)
