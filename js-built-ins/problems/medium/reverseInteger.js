@@ -24,17 +24,31 @@
 function reverseInteger(num) {
   // Your code here
   let reverse = 0;
-  num = num + " "
-  let rem;
-
-  while(num > 0){
-    rem = num % 10
-    reverse = 10*reverse+rem
-    num = num/10
+  if(num>0){
+    while(num){
+      let rem = Math.floor(num % 10);
+      // console.log(rem);
+      reverse = 10*reverse+rem;
+      num = Math.floor(num/10)
+    }
+    reverse = Number(reverse);
+  }else{
+     num = num + " "
+     num = num.substr(1);
+    //  console.log(num);
+     num = Number(num);
+    while(num > 0){
+      let rem = Math.floor(num % 10)
+      reverse = 10*reverse+rem;
+      num = Math.floor(num/10);
+    }
+    reverse = "-" + reverse;
+    reverse = Number(reverse);
   }
-  return reverse
+  return reverse;
+
 }
-let num = 123
+let num = -123
 let result = reverseInteger(num)
 console.log(result)
 
