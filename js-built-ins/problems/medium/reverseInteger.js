@@ -23,33 +23,33 @@
 
 function reverseInteger(num) {
   // Your code here
-  let reverse = 0;
-  if(num>0){
+
+  let rev = 0;
+
+  if(num > 0){
     while(num){
-      let rem = Math.floor(num % 10);
-      // console.log(rem);
-      reverse = 10*reverse+rem;
+      let rem = Math.floor(num % 10)
+      rev = 10*rev + rem
       num = Math.floor(num/10)
     }
-    reverse = Number(reverse);
-  }else{
-     num = num + " "
-     num = num.substr(1);
-    //  console.log(num);
-     num = Number(num);
-    while(num > 0){
-      let rem = Math.floor(num % 10)
-      reverse = 10*reverse+rem;
-      num = Math.floor(num/10);
-    }
-    reverse = "-" + reverse;
-    reverse = Number(reverse);
+    rev =  Number(rev)
   }
-  return reverse;
-
-}
-let num = -123
-let result = reverseInteger(num)
+  else{
+    num = num + " "
+    num = num.substr(1)
+    num = Number(num)
+    while(num>0){
+      let rem = Math.floor(num % 10)
+      rev = 10*rev+rem
+      num = Math.floor(num / 10)
+    }
+      rev = "-" + rev
+      rev=  Number(rev)
+  }
+  return rev
+} 
+let num = -123;
+let result = reverseInteger(num);
 console.log(result)
 
 module.exports = reverseInteger;
