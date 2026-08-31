@@ -22,6 +22,21 @@
 */
 function compression(str) {
   // Your code here
+  let input = "";
+  let count=0
+  for(let i=0; i<str.length; i++){
+    if(input[str[i]]){
+      input[str[i]] = 1;
+    }
+    else{
+      input[str[i]]++;
+      count++;
+    }
+  }
+  return input
 }
+let str = "abc"
+let result = compression(str)
+console.log(result)
 
 module.exports = compression;
