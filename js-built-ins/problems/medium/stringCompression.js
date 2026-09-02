@@ -20,18 +20,13 @@
   Once you've implemented the logic, test your code by running
   - `npm run test-compressString`
 */
+
 function compression(str) {
   // Your code here
   let input = "";
-  let count=0
-  for(let i=0; i<str.length; i++){
-    if(input[str[i]]){
-      input[str[i]] = 1;
-    }
-    else{
-      input[str[i]]++;
-      count++;
-    }
+  for(let key in str){
+    
+     input += key+str[key]
   }
   return input
 }

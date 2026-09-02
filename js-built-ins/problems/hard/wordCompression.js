@@ -1,5 +1,6 @@
 /*
-  Write a function `compressWords` which takes an array of strings as input and returns a new array with consecutive duplicate elements compressed. If an element appears consecutively, it is replaced by the element followed by the count of its occurrences.
+  Write a function `compressWords` which takes an array of strings as input and returns a new array with consecutive duplicate elements compressed. 
+  If an element appears consecutively, it is replaced by the element followed by the count of its occurrences.
 
   Example:
   - Input: ["apple", "apple", "banana", "banana", "banana", "cherry", "apple", "apple"]
