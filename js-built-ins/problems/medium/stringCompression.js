@@ -23,15 +23,33 @@
 
 function compression(str) {
   // Your code here
-  let input = "";
-  for(let key in str){
-    
-     input += key+str[key]
+  if(str.length === 0){
+    return ""
   }
-  return input
+
+  let obj = {}
+  for(let i=0 ; i<str.length ; i++){
+    if(obj[str[i]]){
+      obj[str[i]]++
+    }
+    else{
+      obj[str[i]] = 1;
+    }
+  }
+
+  let compressed  = ""
+  for(let key in obj){
+    if(obj[key] > 1){
+      compressed = compressed + key + obj[key]
+    }
+    else{
+      compressed = compressed + key
+    }
+  }
+  return compressed
 }
-let str = "abc"
-let result = compression(str)
-console.log(result)
+let str = "aaabbbbcccvvmm"
+let Output = compression(str)
+console.log(Output)
 
 module.exports = compression;
