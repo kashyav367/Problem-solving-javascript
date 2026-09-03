@@ -25,16 +25,30 @@
 
 function compressWords(arr) {
   // Your code here
-  let input = []
-  for(let i=0 ; i<arr.length; i++){
-    if(input[arr[i]]){
-      input[arr[i]]++;
+ if(arr.length === 0){
+  return []
+ }
+
+ let input = {}
+ for(let i=0 ; i < arr.length; i++){
+  if(input[arr[i]]){
+    input[arr[i]]+=1
+  }
+  else {
+    input[arr[i]] = 1;
+  }
+ }
+console.log(input)
+ let compressed = []
+ for(let key in input){
+    if(input[key] > 1){
+      compressed = compressed + key + input[key]
     }
     else{
-      input[arr[i]] = 1;
+      compressed = compressed + key
     }
-  }
-  return input
+ }
+ return compressed
 }
 
 
