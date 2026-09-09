@@ -36,27 +36,25 @@
   - `npm run test-fibonacci`
 */
 
-const { fibonacci } = require("../fibonacci");
 
-function iterative(n){
+// function iterative(n){
 
-    let arr = [0,1]
+//     let arr = [0,1]
 
-    for(let i=2 ; i<n ; i++){
-        arr[i] = arr[i-1] + arr[i-2]
-    }
- return arr;
-}
+//     for(let i=2 ; i<n ; i++){
+//         arr[i] = arr[i-1] + arr[i-2]
+//     }
+//  return arr;
+// }
 
-let result = iterative(10)
-console.log(result)
+// let result = iterative(10)
+// console.log(result)
 
 function recursive(n){
+if(n==0 || n==1) return n;
 
-    if(n===0 || n===1) return n;
-
-    return fibonacci(n-1) + fibonacci(n-2)
+return recursive(n-1) + recursive(n-2)
 }
 
-let res = recursive(5);
-console.log(res)
+let Output = recursive(5)
+console.log(Output)
