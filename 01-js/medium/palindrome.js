@@ -14,3 +14,18 @@ module.exports = isPalindrome;
 
 
 //will do i
+
+// function palindromeNumber(input){
+
+//   let rev = 0;
+
+//   while(input > 0){
+//     let rem = input % 10;
+//     rev = Math.floor(rev*10 + rem);
+//     input = Math.floor(input/10);
+//   }
+//   return rev;
+// }
+
+// let result = palindromeNumber(121)
+// console.log(result)
