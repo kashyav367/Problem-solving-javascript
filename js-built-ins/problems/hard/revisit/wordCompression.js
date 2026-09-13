@@ -22,52 +22,46 @@
   - `npm run test-compressWord`
 */
 
-
-function compressWords(arr) {
-  // Your code here
+function compressWord(arr){
  if(arr.length === 0){
-  return []
+    return []
  }
 
  let map = new Map();
 
- let newArr = []
+ let newArr = [];
 
  for(let ele of arr){
-  if(map.has(ele)){
-    map.set(ele, map.get(ele) + 1)
-  }
-  else{
-    if(map.size === 0){
-       map.set(ele,1)
-    }
-    else{
-      for(let [key,value] of map){
-        if (value === 1) {
-                        newArr.push(key);
-                    } else {
-                        newArr.push(`${key}${value}`);
-                    }
-                  }        
-       map.clear();
-       map.set(ele,1)
-    }
-  }
-}
-   for(let [key,value] of map){
-        if (value === 1) {
+  if (map.has(ele)) {
+    map.set(ele, map.get(ele) + 1);
+} 
+else{
+    if(map.size==0){
+      map.set(ele, 1);
+    }else{
+      for(let [key, value] of map){
+         if (value === 1) {
                         newArr.push(key);
                     } else {
                         newArr.push(`${key}${value}`);
                     }
       }
-  return newArr;
+      map.clear();
+      map.set(ele, 1);
+    }
+  }
+ }
+ for(let [key, value] of map){
+       if (value === 1) {
+                        newArr.push(key);
+                    } else {
+                        newArr.push(`${key}${value}`);
+                    }
+      }
+//  console.log(newArr);
+return newArr
 }
 
-
-let arr =  ["apple", "apple", "banana", "banana", "banana", "cherry", "apple", "apple"]
-let result = compressWords(arr);
-console.log(result)
-
-
-module.exports = compressWords;
+let arr = ["apple", "apple", "banana", "banana", "banana", "cherry", "apple", "apple"]
+let output = compressWord(arr)
+console.log(output);
