@@ -29,19 +29,17 @@ function isPerfectNumber(num){
 
   let sum = 0;
 
-  while(num > 0 ){
-  for(let i=1 ; i<num.length ; i++){
+  for(let i=1 ; i<num; i++){
       if( num % i == 0){
         sum +=i;
       }
-      console.log(sum)
   }
-}
+
   return sum === num;
 
 }
 
-let num = 28;
+let num = 6;
 let result = isPerfectNumber(num);
 console.log(result)
 
