@@ -19,7 +19,7 @@ function getPrimesUpTo100(n){
 
     if(n<=1) return false;
 
-    for(let i=2 ; i<Math.sqrt ; i++){
+    for(let i=2 ; i<n ; i++){
         if(n%2 == 0){
             return false;
         }
